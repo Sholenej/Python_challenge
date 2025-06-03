@@ -1,0 +1,42 @@
+# 006 Given two input number of slices (one for # of original slives and another for amount eaten) how many are left?)
+Slices = int(input("Enter the number of slices of pizza delivered: "))
+Total_ate = int(input("Enter the number of slices of pizza you have eaten: "))
+leftover = Slices - Total_ate
+
+print(
+    f"Since I have eaten {Total_ate} slices from the pizza pie that started with {Slices}, there are only {leftover} slices left.")
+
+# 007 Ask for name and age then show age on next bday
+
+frt_name = input("Please enter your first name: ")
+age = int(input("How old are you in years right now? "))
+nxt_bday = age + 1
+
+print(f"Hey {frt_name}, on your next birthday you will be {nxt_bday} years old.")
+
+# 008 divide the total amount of a bill over the numbrer of diners. request both
+
+Bill_total = float(input("What was the total cost of the banquet? "))
+num_guests = int(input("How many guests did we serve? "))
+per_guest_total = Bill_total / num_guests
+
+# How to format for money output?
+print(f"Each guest owes ${per_guest_total} for their meal.")
+
+# 009 For an input number of days converts into hours, minutes, and seconds.
+
+days = int(input("How many days are there until the deadline? "))
+
+hours = int(days * 24)
+minutes = int(hours * 60)
+seconds = int(minutes * 60)
+
+print(
+    f"Hours until deadline: {hours}\nMinutes until deadline: {minutes}\nSeconds until deadline: {seconds}")
+
+# 010 convert input kg to lb
+
+kg = float(input("How many kilograms is it? "))
+
+lb = float(kg*2204)
+print(f"Oh, so you mean {lb} pounds. Just say that next time...")
