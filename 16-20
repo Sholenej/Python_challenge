@@ -1,0 +1,72 @@
+# 016a ask about weather, advise on umbrella and greet for the day
+
+rain_status = str.lower(input("Is it raining outside? Yes or No? "))
+windy_status = str.lower(input("Is it windy today? Yes or No? "))
+
+if rain_status == "yes":
+    if windy_status == "yes":
+        print("It's too windy for an umbrella")
+    elif windy_status == "no":
+        print("Bring an umbrella")
+else:
+    print("Enjoy your day.")
+
+# 016b ask about weather, advise on umbrella and greet for the day. (Ask 2nd question only if affirmative 1st response)
+
+rain_status2 = str.lower(input("Is it raining outside? Yes or No? "))
+
+if rain_status2 == "yes":
+    windy_status2 = str.lower(input("Is it windy today? Yes or No? "))
+    if windy_status2 == "yes":
+        print("It's too windy for an umbrella today. Try a raincoat instead.")
+    elif windy_status2 == "no":
+        print("Make sure you bring an umbrella.")
+else:
+    print("That\'s great! Enjoy your day.")
+
+# 017 give a selected response for an age input on request
+
+age = int(input("Tell me, how old are you? "))
+
+if age >= 18:
+    print("You can vote!")
+elif age == 17:
+    print("You can learn to drive.")
+elif age == 16:
+    print("You can buy a lottery ticket.")
+else:
+    print("Scram kid! You can go trick or treating.")
+
+# 018 prompt requesting a number. Only numbers 10 - 20 are correct all others are too high or low
+
+num1 = int(input("Let's see if you have telepathy. Guess any number. "))
+
+if num1 <= 9:
+    print("Too low")
+elif num1 > 9 and num1 < 21:
+    print("Eureka! You are correct!")
+else:
+    print("Too high!")
+
+# 019 ask to input 1,2, or 3 and anything else is an error
+
+prompt = input("Please enter a 1, 2, or 3. ")
+
+if prompt == "1":
+    print("Thank You")
+elif prompt == "2":
+    print("Well Done")
+elif prompt == "3":
+    print("Correct")
+else:
+    print("Error: Failure to follow directions.")
+
+# 020 Prompt for first name then display the length of characters.
+
+first_name = str(input("What\'s your first name? "))
+
+if first_name != "":
+    print(
+        f"Did you know your first name is {len(first_name)} characters long.")
+else:
+    print("Come on tell me. Please ><")
