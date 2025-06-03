@@ -1,0 +1,60 @@
+# 041 Prompt for name and a number. If number chosen >10 then print name that num of times. If <10 then too high 3 times.
+first_name = str(input("Enter your first name: "))
+num = int(input("Choose any number: "))
+
+if num < 10:
+    for i in range(0, num):
+        print(first_name)
+else:
+    for i in range(0, 3):
+        print("Too High!")
+
+# 042 set variable at 0 prompt for 5 numbers and ask whther to add after each iteration. display total
+
+Total = 0
+for i in range(0, 5):
+    numa = int(input("Choose a number: "))
+    crit = (input("Should we add this in? (y/n) "))
+    if crit == "y":
+        # This line allows each iteration to add to the original value.
+        Total = Total + numa
+print(f"The total is: {Total}")
+
+# 043 Prompt for a direction and a number then count up from 1 or down from 20. Error I don't understand.
+
+direction = input("Choose a direction up or down: ")
+
+if direction == "up":
+    num1 = int(input("Give me your top number: "))
+    for i in range(0, num1+1):
+        print(i)
+elif direction == "down":
+    num1 = int(input("Choose a number under 20: "))
+    for i in range(20, num1-1, -1):
+        print(i)
+else:
+    print("I don\'t understand.")
+
+# 044 prompt number of guests. if <10 ask the name of guestsand return invited. if >10 say too many.
+
+guests = int(input("How many guests are invied to your dinner party: "))
+guest_list = ""
+
+if guests <= 10:
+    for i in range(1, guests+1):
+        name = str(input(f"Name of guest {i}: "))
+        print(f"{name} has been invited.")
+        guest_list = guest_list + name + "\n"
+    print(f"People invited:\n{guest_list}")
+else:
+    print("That's too many people for a dinner party.")
+
+# 045 While loops: set an object to 0 while less than 50 allow user to input a number and add it to obj. stop loop and "over 50" message
+
+Acct = 0
+while Acct < 50:
+    num2 = int(input("Enter a number: "))
+    Acct = Acct + num2
+    print(f"The total is: {Acct}")
+else:
+    print("You got greedy. Your limit was 50.")
