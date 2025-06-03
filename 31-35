@@ -1,0 +1,46 @@
+# 031 Find he area of a circle given a prompted radius
+
+pi = (22/7)
+radius = int(input("What is the radius of the circle: "))
+
+print(f"The area of the circle is: {pi*radius}")
+
+# 032 prompt for radius and depth then return the volume rounded to 3 decimal places
+
+radius2 = int(input("Enter the radius of the cylinder: "))
+depth = int(input("What is the depth of the cylinder? "))
+
+print(f"The volume of the cylinder is: {round(((radius2*pi)*depth), 2)}")
+
+# 033 prompt for 2 numbers then divide and display answer and remainder
+
+num1 = int(input("Enter a numerator: "))
+num2 = int(input("Enter a denominator: "))
+
+divisible = (num1 // num2)
+remainder = (num1 % num2)
+
+print(
+    f"When you divide {num1} by {num2} you get {divisible} with a remainder of {remainder}.")
+
+# 034 Display a list and prompt for a choice. return the area of either choice or error.
+
+print("1) Square\n2) Triangle")
+
+shape = str(input("Enter your option: "))
+
+if shape == "1":
+    side1 = int(input("What is the length of a side? "))
+    print(f"The area of the square is: {(side1)*4}")
+elif shape == "2":
+    height = int(input("What is the height of the triangle? "))
+    base = int(input("What is the base of the triangle? "))
+    print(f"The area of the trianlge is: {base*height*(0.5)}")
+else:
+    print("Error: Dude! You only had two options.")
+
+# 035 Prompt name then print 3 times
+
+first_name = str(input("Tell me your first name: "))
+for i in range(0, 3):
+    print(first_name)
