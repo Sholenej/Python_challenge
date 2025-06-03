@@ -1,0 +1,45 @@
+# 021 Prompt for first and last name then join and display along with length
+
+first_name = str(input("Tell me your first name. "))
+last_name = str(input("What is your last name? "))
+full_name = first_name + " " + last_name
+
+print(f"{full_name}, your name is {len(full_name)-1} characters long.")
+
+# 022 Prompt first and last name in lower case. then change the case display
+
+first_name1 = str(
+    input("What is your first name? (Please type in lower case): "))
+last_name1 = str(
+    input("Tell me you family name? (Please type in lower case): "))
+full_name1 = str.title(first_name1) + " " + str.title(last_name1)
+
+print(f"Here is the professional way to display your name: {full_name1}")
+
+# 023 Prompt for the first line of a nursery rhyme. display length and prompt for begin and end num and display length
+
+Rhyme = str(input("Tell me the first line of your favorite nursery rhyme: "))
+Rhyme_len = len(Rhyme)
+print(f"That line was {Rhyme_len} characters long. ")
+
+start_num = int(input(f"Give me a number between 1 and {Rhyme_len}: "))
+end_num = int(input(f"Give me a number between {start_num} and {Rhyme_len}: "))
+section = Rhyme[start_num:end_num]
+print(section)
+
+# 024 display a prompt in upper case.
+
+word = str.upper(input("Enter me a word: "))
+print(word)
+
+# 025 prompt first name. for name <5 prompt lastname and display w/o space in upper case. if >5 display in lower case.
+
+first_name2 = str(input("Tell me your first name: "))
+
+
+if len(first_name2) > 5:
+    print(f"{str.lower(first_name2)}")
+elif len(first_name2) <= 5:
+    last_name2 = str(
+        input("That's too short. Tell me your last name as well: "))
+    print(f"{str.upper(first_name2+last_name2)}")
