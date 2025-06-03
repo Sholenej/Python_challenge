@@ -1,0 +1,48 @@
+# 001 : Ask user for 1st name and print hello
+
+first_name = input("Enter your first name ")
+
+print(f"Hello, {first_name}!")
+
+# 002 : Ask for first and last name then say hello
+
+first_name = input("Enter your first name ")
+last_name = input("Enter your last name ")
+
+print(f"Hello, {first_name} {last_name}!")
+
+# 003a : Tell a two line joke
+
+prompt = input("What do you call a bear with no teeth? ")
+
+print("A Gummy bear! ")
+
+# 003b : Tell a two line joke trying to use one line of code
+
+print("What do you call a bear with no teeth? \nA GUMMY BEAR!")
+
+# 004 : Ask user for two numbers then add them together
+
+num1 = int(input("Enter the first number to sum: "))
+num2 = int(input("Enter the second number to sum: "))
+
+print(f"The total of {num1} + {num2} = {num1 + num2} ")
+
+# 005a : Ask user for 3 numbers and add frst two then multiply and print response
+
+num1a = int(input("Enter the number of guests from groom: "))
+num2a = int(input("Enter the number of guests from the bride: "))
+Courses = int(input("Enter the number of courses requested for the meal: "))
+guest_total = (num1a + num2a)
+
+print(
+    f"The total number of guests is {num1a} + {num2a} = {num1a + num2a} and at {Courses} courses per person, \nThe total number of plates to be served is {guest_total * Courses}.")
+
+# 005b : Same question as 'a' but al ternative way to write it
+
+guest_B = int(input("Enter the number of guests on the Bride's list: "))
+guest_G = int(input("Enter the number of guests on the Groom's list: "))
+courses = int(input("Enter number of courses for the dinner: "))
+coursetotal = (guest_B + guest_G) * courses
+
+print(f"The total number of plates is: {coursetotal}.")
