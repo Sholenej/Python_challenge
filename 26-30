@@ -1,0 +1,36 @@
+# 026 English to piglatin translator in lower case
+
+word = str.lower(input("Enter a word you want to translate: "))
+crit1 = (word[0])
+cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+        "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+vows = ["a", "e", "i", "o", "u"]
+
+if crit1 in cons:
+    print(f"{(word[1:])+(word[0])+"ay"}")
+elif crit1 in vows:
+    print(f"{word+"away"}")
+else:
+    print("Dude, words start with letters.")
+
+# 027 prompt for a number with a lot decimal places then multiply by 2
+
+num1 = float(input("Please enter a number with more than 3 decimal spaces: "))
+
+print(num1*2)
+
+# 028 same as 027 but round to the tenth place
+
+num2 = float(input("Please enter a number with more than 3 decimal spaces: "))
+
+print(round((num2*2), 2))  # round to the tenth place
+
+# 029 prompt for x >500 calc sq rt and round to the tenth.
+
+num3 = float(input("Enter a number greater than 500: "))
+
+print(round((num3**0.5), 2))
+
+# 030 display pi to 5 decimal spaces
+
+print(round((22/7), 5))
