@@ -1,0 +1,37 @@
+# 036 Repeat 035 but prompt or the number of times to display.
+
+first_name = str(input("Enter your first name: "))
+num1 = int(input("Enter a number: "))
+
+for i in range(0, num1):
+    print(first_name)
+
+# 037 prompt for name then return each letter on a separate line
+
+first_name1 = str(input("What is your first name? "))
+for i in range(1, (len(first_name1))+1):
+    print(first_name1[i-1])
+
+# 038 repeat 037 but prompt for a number and repeat sequence that many times.
+
+first_name2 = str(input("Tell me your first name: "))
+num2 = int(input("Enter a number: "))
+
+for i in range(0, num2):
+    for i in range(1, (len(first_name2))+1):
+        print(first_name2[i-1])
+
+# 039 Prompt for a number 1 - 12 then display times table.
+
+num3 = int(input("Enter a number 1 - 12: "))
+
+for i in range(1, 13):
+    table = num3 * i
+    print(num3, "X", i, "=", table)
+
+# 040 Prompt for a number below 50 then count down from 50 to that number
+
+num4 = int(input("Choose a number below 50: "))
+
+for i in range(50, (num4-1), -1):
+    print(i)
