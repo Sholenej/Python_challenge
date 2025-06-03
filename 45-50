@@ -1,0 +1,62 @@
+# 046 Prompt for a number and keep asking until you get a number over 20. then msg returning last number and break
+num1 = 0
+while num1 < 20:
+    num1 = int(input("Guess a number: "))
+else:
+    print(f"The last number you entered was {num1}")
+
+# 047 prompt for 2 numbers then ask if they want to add more and keep adding until they say no then display total.
+
+num2 = int(input("Enter a number you want to add: "))
+num3 = int(input("Enter another number you want to add: "))
+Total = num2 + num3
+print(f"The total is: {Total}")
+crit1 = str(input("Would you like to add another number (y/n): "))
+while crit1 == "y":
+    num4 = int(input("Enter another number you want to add: "))
+    Total = Total + num4
+    print(f"The current total is: {Total}")
+    crit1 = str(input("Would you like to add another number (y/n): "))
+else:
+    print(f"Your final total is: {Total}")
+
+# 048 prompt for guests and add a separate count to display when user stops responding y.
+
+guest = str(input("Add a guest: "))
+guest_count = 1
+crit2 = str(input("Would you like to add another guest (y/n)? "))
+while crit2 == "y":
+    guest = str(input("Add another guest: "))
+    guest_count = guest_count + 1
+    crit2 = str(input("Would you like to add another guest (y/n)? "))
+else:
+    print(f"Total number of guests is: {guest_count}")
+
+# 049 Set a value and prompt to guess. count number of attempts and display with congrats when number is picked
+
+compnum = 50
+num5 = int(input("Guess a number: "))
+attempts = 1
+while num5 != compnum:
+    if num5 > compnum:
+        print("Too high. Try again.")
+        num5 = int(input("Guess another number: "))
+        attempts = attempts + 1
+    elif num5 < compnum:
+        print("Too low. Try again")
+        num5 = int(input("Guess another number: "))
+        attempts = attempts + 1
+print(f"You are correct! That took you: {attempts} attempts.")
+
+# 050 prompt for number between 10 and 20 if too low or too high ask again. then say thank you
+
+guess = int(input("Choose a number between 10 and 20: "))
+set = range(10, 20, 1)
+while guess not in set:
+    if guess < 10:
+        print("Too low. Try again.")
+        guess = int(input("Choose again: "))
+    else:
+        print("Too high. Try again.")
+        guess = int(input("Choose again: "))
+print("Thank you")
