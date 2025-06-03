@@ -1,0 +1,47 @@
+# 011 request 1st num >100 and 2nd num <10 then give divisible amount
+
+num1 = int(input("Give me a number above 100: "))
+num2 = int(input("Give a number below 10: "))
+answer = num1 // num2
+
+print(f"The total number of whole times {num2} can go into {num1} is {answer}")
+
+# 012 request two numbers then list in numerical order
+
+num1a = int(input("Give me a number: "))
+num2a = int(input("Give me another number: "))
+
+if num1a > num2a:
+    print(f"{num2a}\n{num1a}")
+elif num2a > num1a:
+    print(f"{num1a}\n{num2a}")
+else:
+    print("No duplicates please")
+
+# 013 request a number below 20 and give a message if too high
+
+num3 = int(input("Give me a number below 20: "))
+
+if num3 < 20:
+    print("Thank you")
+else:
+    print("Too high")
+
+# 014 request a number between 9and 21 and error outside that range
+
+num4 = int(input("Pick a number from 10 and 20: "))
+
+if num4 >= 10 and num4 <= 20:
+    print("Thank you")
+else:
+    print("Incorrect Answer")
+
+# 015 ask fav color but reply you only like red
+
+color = input("What is your favorite color? ")
+fav_color = ["red", "Red", "RED"]
+
+if color in fav_color:
+    print("I like red, too")
+else:
+    print(f"I don\'t like {color}, I only like Red.")
